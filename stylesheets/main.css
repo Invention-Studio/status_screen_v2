@@ -1,0 +1,93 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 45% 25% 30%;
+  grid-template-rows: 150px 30px auto 100px 15px 30px;
+}
+
+.main-header {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  background-color: red;
+}
+
+.main-header-image {
+  float: left;
+  height: 150px;
+  width: 70%;
+}
+
+.main-header-date-time {
+  float: right;
+  height: 150px;
+  width: 30%;
+  padding: 30px 50px;
+}
+
+.main-panel {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  background-color: pink;
+}
+
+.main-panel-headline {
+  grid-column: 1 / 3;
+  grid-row: 4;
+  background-color: green;
+}
+
+.main-panel-headline-table {
+  height: 100%;
+  width: 100%;
+  padding: 0px 25px;
+}
+
+.main-panel-loading-bar {
+  grid-column: 1 / 3;
+  grid-row: 5;
+  background-color: blue;
+}
+
+.main-panel-scrolling-headline {
+  grid-column: 1 / 3;
+  grid-row: 6;
+  background-color: red;
+}
+
+.queue-header {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: blue;
+}
+
+.queue-header-table {
+  height: 100%;
+  width: 100%;
+  padding: 25px 0px;
+  text-align: center;
+}
+
+.queue-info {
+  grid-column: 3;
+  grid-row: 2;
+  background-color: violet;
+  padding: 0px 15px;
+}
+
+.queue-info-table {
+  height: 100%;
+  width: 100%;
+}
+
+.queue-panel {
+  grid-column: 3;
+  grid-row: 3 / 7;
+  background-color: cyan;
+}
