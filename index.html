@@ -2,24 +2,31 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.li-scroller.1.0.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <link rel="stylesheet" href="stylesheets/li-scroller.css">
     <link rel="stylesheet" href="stylesheets/main.css">
     <title>Invention Studio</title>
   </head>
   <body>
     <div class="container">
       <div class="main-header">
-        <img class="main-header-image" src="img/header_logo.svg" alt="Invention Studio">
-        <table class="main-header-date-time">
-          <tr>
-            <td>Tuesday</td>
-          </tr>
-          <tr>
-            <td>June 5, 2018</td>
-          </tr>
-          <tr>
-            <td>12:13 PM</td>
-          </tr>
-        </table>
+        <img class="main-header-logo" src="img/header_logo.svg" alt="Invention Studio">
+        <img class="main-header-title" src="img/header_title.svg" alt="Invention Studio">
+        <div class="main-header-date-time-container">
+          <table class="main-header-date-time">
+            <tr>
+              <td>Tuesday</td>
+            </tr>
+            <tr>
+              <td>June 5, 2018</td>
+            </tr>
+            <tr>
+              <td>12:13 PM</td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="main-panel">
 
@@ -34,7 +41,11 @@
       <div class="main-panel-loading-bar">
       </div>
       <div class="main-panel-scrolling-headline">
-        <span>This is a scrolling headline bar like what you see on news channels</span>
+        <ul id="news-ticker">
+          <li><span>THE INVENTION STUDIO IS A STUDENT-RUN MAKERSPACE OPEN TO ALL GEORGIA TECH.</span></li>
+          <li><span>IT IS STAFFED BY PROTOTYPING INSTRUCTORS, STUDENT VOLUNTEERS WHO ARE ON HAND TO TRAIN YOU AND HELP YOU WITH YOUR PROJECTS.</span></li>
+          <li><span>USE OF THE STUDIO IS FREE FOR ALL STUDENTS, FACULTY, AND STAFF OF GEORGIA TECH, REGARDLESS OF YEAR, MAJOR, OR PRIOR EXPERIENCE.</span></li>
+        </ul>
       </div>
       <div class="queue-header">
         <table class="queue-header-table">
@@ -55,7 +66,6 @@
         </table>
       </div>
       <div class="queue-panel">
-
       </div>
     </div>
   </body>

@@ -13,22 +13,34 @@ html, body {
 }
 
 .main-header {
+  display: flex;
   grid-column: 1 / 3;
   grid-row: 1;
-  background-color: red;
+  background-color: #283941;
+  color: #D0D4D8;
 }
 
-.main-header-image {
-  float: left;
-  height: 150px;
-  width: 70%;
+.main-header-logo {
+  flex-grow: 0;
+  padding: 25px 50px 25px 25px;
+  height: 100px;
+}
+
+.main-header-title {
+  flex-grow: 1;
+  padding: 45px 0px;
+  height: 60px;
+}
+
+.main-header-date-time-container {
+  flex-grow: 0;
 }
 
 .main-header-date-time {
-  float: right;
   height: 150px;
-  width: 30%;
-  padding: 30px 50px;
+  width: 250px;
+  padding: 20px 50px;
+  text-align: right;
 }
 
 .main-panel {
@@ -58,7 +70,8 @@ html, body {
 .main-panel-scrolling-headline {
   grid-column: 1 / 3;
   grid-row: 6;
-  background-color: red;
+  background-color: #33393F;
+  color: #D0D4D8;
 }
 
 .queue-header {
