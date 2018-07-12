@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="main-header">
+      <div class="main-header right-column">
         <img class="main-header-logo" src="img/header_logo.svg" alt="Invention Studio">
         <img class="main-header-title" src="img/header_title.svg" alt="Invention Studio">
         <div class="main-header-date-time-container">
@@ -27,19 +27,17 @@
           </table>
         </div>
       </div>
-      <div class="main-panel">
+      <div class="main-panel right-column">
 
       </div>
-      <div class="main-panel-headline">
+      <div class="main-panel-headline right-column">
         <table class="main-panel-headline-table">
           <tr>
-            <td><h1>WHO'S ON DUTY?</h1></td>
+            <td id="headline"><span>Who's on duty?</span></td>
           </tr>
         </table>
       </div>
-      <div class="main-panel-loading-bar">
-      </div>
-      <div class="main-panel-scrolling-headline">
+      <div class="main-panel-scrolling-headline right-column">
         <ul id="news-ticker">
           <!-- <li><span>THE INVENTION STUDIO IS A STUDENT-RUN MAKERSPACE OPEN TO ALL GEORGIA TECH.</span></li>
           <li><span>IT IS STAFFED BY PROTOTYPING INSTRUCTORS, STUDENT VOLUNTEERS WHO ARE ON HAND TO TRAIN YOU AND HELP YOU WITH YOUR PROJECTS.</span></li>
@@ -49,10 +47,10 @@
       <div class="queue-header">
         <table class="queue-header-table">
           <tr>
-            <td>3D Printers</td>
+            <td id="queue-name">3D Printers</td>
           </tr>
           <tr>
-            <td>0 Available</td>
+            <td id="queue-status">0 Available</td>
           </tr>
         </table>
       </div>
@@ -60,12 +58,30 @@
         <table class="queue-info-table">
           <tr>
             <td><span style="float: left;">QUEUE</span></td>
-            <td><span style="float: right;">Average Wait Time: 120 min</span></td>
+            <td><span style="display: none; float: right;">Avg Wait: 0 min</span></td>
           </tr>
         </table>
       </div>
       <div class="queue-panel">
+        <div class="queue-entry">
+          <table class="queue-entry-title-container">
+            <tr>
+              <td class="queue-entry-title"><span>1. George Burdell</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="queue-entry">
+        </div>
+        <div class="queue-entry">
+        </div>
+        <div class="queue-entry">
+        </div>
+        <div class="queue-entry">
+        </div>
       </div>
     </div>
+    <template>
+
+    </template>
   </body>
 </html>

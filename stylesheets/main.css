@@ -2,6 +2,8 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-family: "Century Gothic", CenturyGothic, sans-serif;
+  color: #f0f2f4;
 }
 
 .container {
@@ -15,7 +17,6 @@ html, body {
   grid-area: main-header;
   padding: 25px;
   background-color: #283941;
-  color: #D0D4D8;
 }
 
 .main-header-logo {
@@ -39,42 +40,54 @@ html, body {
 
 .main-header-date-time {
   height: 100px;
-  max-width: 160px;
+  max-width: 175px;
   padding-left: 25px;
   text-align: right;
 }
 
 .main-panel {
-  display: flex;
   grid-area: main-panel;
-  background-color: pink;
+  background-color: #eff3f5;
 }
 
 .main-panel-headline {
   grid-area: headline;
-  background-color: green;
+  background-color: #283941;
+  color: white;
+  padding-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .main-panel-headline-table {
   height: 100%;
   width: 100%;
   padding: 0px 25px;
+  table-layout: fixed;
 }
 
-.main-panel-loading-bar {
-  grid-area: loading-bar;
-  background-color: blue;
+#headline {
+  font-size: 38px;
+  font-weight: bolder;
+  vertical-align: bottom;
+}
+
+#headline span {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .main-panel-scrolling-headline {
   grid-area: news-ticker;
-  background-color: #33393F;
+  background-color: #11171C;
   color: #D0D4D8;
 }
 
 .queue-header {
   grid-area: queue-headline;
-  background-color: blue;
+  background-color: #b60000;
 }
 
 .queue-header-table {
@@ -84,10 +97,20 @@ html, body {
   text-align: center;
 }
 
+#queue-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+#queue-status {
+  font-size: 24px;
+}
+
 .queue-info {
   grid-area: queue-info;
-  background-color: violet;
   padding: 0px 15px;
+  background-color: #33393F;
 }
 
 .queue-info-table {
@@ -95,36 +118,77 @@ html, body {
   width: 100%;
 }
 
+.queue-info-table td {
+  vertical-align: bottom;
+}
+
 .queue-panel {
-  display: flex;
   grid-area: queue-panel;
-  background-color: cyan;
+  padding: 0 20px;
+  background-color: #ffe5e5;
+  overflow: scroll;
+}
+
+.queue-entry {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  color: #07090A;
+  font-size: 20px;
+  background-color: #D7DDE0;
+  border: 1px solid #33393F;
+  border-radius: 8px;
+}
+
+.queue-entry-title-container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.queue-entry-title {
+  width: 100%
+  height: 100%;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+.queue-entry-title span {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 769px) {
   .container {
     height: 100%;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 150px 30px auto 100px 15px 30px;
+    grid-template-rows: 150px 30px auto 80px 30px;
     grid-template-areas:
       "main-header queue-headline"
       "main-panel queue-info"
       "main-panel queue-panel"
       "headline queue-panel"
-      "loading-bar queue-panel"
       "news-ticker queue-panel";
+  }
+
+  .right-column {
+    border-right: 1px solid #11171C;
   }
 }
 
 @media screen and (max-width: 768px) {
   .container {
     grid-template-columns: 100%;
-    grid-template-rows: 150px calc(100% - 295px) 100px 15px 30px 150px 30px calc(100% - 180px);
+    grid-template-rows: 150px calc(100% - 260px) 80px 30px 150px 30px calc(100% - 180px);
     grid-template-areas:
       "main-header"
       "main-panel"
       "headline"
-      "loading-bar"
       "news-ticker"
       "queue-headline"
       "queue-info"
