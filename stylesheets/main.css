@@ -81,8 +81,6 @@ html, body {
 
 .main-panel-scrolling-headline {
   grid-area: news-ticker;
-  background-color: #11171C;
-  color: #D0D4D8;
 }
 
 .queue-header {

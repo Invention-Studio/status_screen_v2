@@ -1,0 +1,16 @@
+.news-ticker {
+  width: 100%;
+  height: 100%;
+  background-color: #11171C;
+  color: #D0D4D8;
+  overflow: hidden;
+}
+
+.ticker-span {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+}
