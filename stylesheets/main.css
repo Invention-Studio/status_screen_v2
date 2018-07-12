@@ -179,6 +179,10 @@ html, body {
   .right-column {
     border-right: 1px solid #11171C;
   }
+
+  #headline {
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 768px) {
