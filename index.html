@@ -7,12 +7,14 @@
     <script type="text/javascript" src="scripts/news-ticker.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
     <link rel="stylesheet" href="stylesheets/main.css">
-    <link rel="stylesheet" href="stylesheets/news-ticker.css">
+    <link rel="stylesheet" href="stylesheets/main_panel.css">
+    <link rel="stylesheet" href="stylesheets/queue_panel.css">
+    <link rel="stylesheet" href="stylesheets/news_ticker.css">
     <title>Invention Studio</title>
   </head>
   <body>
     <div class="container">
-      <div class="main-header right-column">
+      <div class="main-header main-panel-right">
         <img class="main-header-logo" src="img/header_logo.svg" alt="Invention Studio">
         <img class="main-header-title" src="img/header_title.svg" alt="Invention Studio">
         <div class="main-header-date-time-container">
@@ -29,17 +31,17 @@
           </table>
         </div>
       </div>
-      <div class="main-panel right-column">
+      <div class="main-panel main-panel-right">
 
       </div>
-      <div class="main-panel-headline right-column">
+      <div class="main-panel-headline main-panel-right">
         <table class="main-panel-headline-table">
           <tr>
             <td id="headline"><span>Who's on duty?</span></td>
           </tr>
         </table>
       </div>
-      <div class="main-panel-scrolling-headline right-column news-ticker">
+      <div class="main-panel-scrolling-headline main-panel-right news-ticker">
         <ul id="news-ticker">
           <li><span>THE INVENTION STUDIO IS A STUDENT-RUN MAKERSPACE OPEN TO ALL GEORGIA TECH</span></li>
           <li><span>IT IS STAFFED BY PROTOTYPING INSTRUCTORS, STUDENT VOLUNTEERS WHO ARE ON HAND TO TRAIN YOU AND HELP YOU WITH YOUR PROJECTS</span></li>
@@ -65,38 +67,16 @@
         </table>
       </div>
       <div class="queue-panel">
-        <div class="queue-entry">
-          <table class="queue-entry-title-container">
-            <tr>
-              <td class="queue-entry-title"><span>1. George Burdell</span></td>
-            </tr>
-          </table>
-        </div>
-        <div class="queue-entry">
-          <table class="queue-entry-title-container">
-            <tr>
-              <td class="queue-entry-title"><span>2. Johnny Appleseed</span></td>
-            </tr>
-          </table>
-        </div>
-        <div class="queue-entry">
-          <table class="queue-entry-title-container">
-            <tr>
-              <td class="queue-entry-title"><span>3. Jane Doe</span></td>
-            </tr>
-          </table>
-        </div>
-        <div class="queue-entry">
-          <table class="queue-entry-title-container">
-            <tr>
-              <td class="queue-entry-title"><span>4. Peter Piper</span></td>
-            </tr>
-          </table>
-        </div>
       </div>
     </div>
     <template>
-
+      <div class="queue-entry">
+        <table class="queue-entry-title-container">
+          <tr>
+            <td class="queue-entry-title"><span class="queue-entry-title-content"></span></td>
+          </tr>
+        </table>
+      </div>
     </template>
   </body>
 </html>

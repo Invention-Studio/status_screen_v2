@@ -1,0 +1,66 @@
+.queue-header-table {
+  height: 100%;
+  width: 100%;
+  padding: 25px 0px;
+  text-align: center;
+}
+
+#queue-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+#queue-status {
+  font-size: 24px;
+}
+
+.queue-info-table {
+  height: 100%;
+  width: 100%;
+}
+
+.queue-info-table td {
+  vertical-align: bottom;
+}
+
+.queue-panel {
+  grid-area: queue-panel;
+  padding: 0 20px;
+  background-color: #ffdbdb;
+  overflow: scroll;
+}
+
+.queue-entry {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  color: #07090A;
+  font-size: 20px;
+  background-color: #ffa3a3;
+  border: 2px solid #b60000;
+  border-radius: 8px;
+}
+
+.queue-entry-title-container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.queue-entry-title {
+  width: 100%
+  height: 100%;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+.queue-entry-title-content {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
