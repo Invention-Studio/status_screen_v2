@@ -15,9 +15,9 @@
   var QUEUE_INFO_3D_PRINTERS = {title: "3D Printers",
                               color: "#b60000"};
   var QUEUE_INFO_LASER_CUTTERS = {title: "Laser Cutters",
-                              color: "#283941"};
+                              color: "#1c1c82"};
   var QUEUE_INFO_WATERJET = {title: "Waterjet",
-                              color: "#283941"};
+                              color: "#1c1c82"};
 
   var App = window.App;
   var Clock = App.Clock;
