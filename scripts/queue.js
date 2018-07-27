@@ -139,16 +139,16 @@
         });
       } else { //If there are no elements, create and display an element showing the queue is empty
         //Create a new Entry that says "No Queue" and get the DOM element
-        var emptyEntry = new Entry(queue.elementTemplateSelector, {message: "No Queue"}).$element;
+        var emptyEntry = new Entry(queue.$elementTemplateSelector, {message: "No Queue"}).$element;
         if (backgroundColor && borderColor) {
-          newEntry.css({
+          emptyEntry.css({
             "background-color": backgroundColor,
             "border-color": borderColor
           });
         }
-        $(newEntry).hide(); //Hide the element
-        queue.$queuePanel.append(newEntry); //Add the element to the page
-        $(newEntry).fadeIn(); //Fade the element in
+        $(emptyEntry).hide(); //Hide the element
+        queue.$queuePanel.append(emptyEntry); //Add the element to the page
+        $(emptyEntry).fadeIn(); //Fade the element in
       }
     });
   }
@@ -164,7 +164,7 @@
 
     //Ensure the title label element exists
     if (titleContent.length === 0) {
-      throw new Error('Could not find element with selector: ' + selector);
+      throw new Error('Could not find titleContent element');
     }
 
     //Create the title lable text

@@ -31,35 +31,40 @@
   var mainQueue = new Queue(SELECTOR_QUEUE_HEADER, SELECTOR_QUEUE_TITLE, SELECTOR_QUEUE_STATUS, SELECTOR_QUEUE_PANEL, SELECTOR_TEMPLATE_QUEUE_ENTRY);
 
   var currentQueue = QUEUE_INFO_DEFAULT;
+  updateQueues();
+
   window.setInterval(function() {
-    console.log("checkpoint");
-    inventionStudioApi.getQueue(function(response) {
-      switch (currentQueue.title) {
-        case "3D Printers":
-          currentQueue = QUEUE_INFO_LASER_CUTTERS;
-          break;
-        case "Laser Cutters":
-          currentQueue = QUEUE_INFO_WATERJET;
-          break;
-        case "Waterjet":
-          currentQueue = QUEUE_INFO_3D_PRINTERS;
-          break;
-        default:
-          currentQueue = QUEUE_INFO_3D_PRINTERS;
-      }
+    updateQueues();
+  }, 15000);
 
-      var entryArray = $.parseJSON(response);
-
-      var queueEntries = [];
-
-      entryArray.forEach(function (entry) {
-        if (entry.queueName == currentQueue) {
-          queueEntries.push(entry);
+  function updateQueues() {
+      inventionStudioApi.getQueue(function(response) {
+        switch (currentQueue.title) {
+          case "3D Printers":
+            currentQueue = QUEUE_INFO_LASER_CUTTERS;
+            break;
+          case "Laser Cutters":
+            currentQueue = QUEUE_INFO_WATERJET;
+            break;
+          case "Waterjet":
+            currentQueue = QUEUE_INFO_3D_PRINTERS;
+            break;
+          default:
+            currentQueue = QUEUE_INFO_3D_PRINTERS;
         }
-      });
 
-      mainQueue.updateQueue(currentQueue.color, currentQueue.title, "0 Available", queueEntries);
-    });
-  }, 10000);
+        var entryArray = $.parseJSON(response);
+
+        var queueEntries = [];
+
+        entryArray.forEach(function (entry) {
+          if (entry.queueName == currentQueue) {
+            queueEntries.push(entry);
+          }
+        });
+
+        mainQueue.updateQueue(currentQueue.color, currentQueue.title, "0 Available", queueEntries);
+      });
+  }
 
 }) (window);
