@@ -30,8 +30,6 @@
   var inventionStudioApi = new InventionStudioApi();
   var mainQueue = new Queue(SELECTOR_QUEUE_HEADER, SELECTOR_QUEUE_TITLE, SELECTOR_QUEUE_STATUS, SELECTOR_QUEUE_PANEL, SELECTOR_TEMPLATE_QUEUE_ENTRY);
 
-  // mainQueue.updateQueue(QUEUE_INFO_3D_PRINTERS.color, QUEUE_INFO_3D_PRINTERS.title, "1 Available", [{position: 1, userName: "George Burdell"}, {position: 2, userName: "Sally Mae"}]);
-
   var currentQueue = QUEUE_INFO_DEFAULT;
   window.setInterval(function() {
     console.log("checkpoint");
@@ -40,7 +38,7 @@
         case "3D Printers":
           currentQueue = QUEUE_INFO_LASER_CUTTERS;
           break;
-        case "Laser Cutter":
+        case "Laser Cutters":
           currentQueue = QUEUE_INFO_WATERJET;
           break;
         case "Waterjet":
@@ -62,6 +60,6 @@
 
       mainQueue.updateQueue(currentQueue.color, currentQueue.title, "0 Available", queueEntries);
     });
-  }, 5000);
+  }, 10000);
 
 }) (window);
