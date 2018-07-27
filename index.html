@@ -3,9 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="scripts/news_ticker.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
     <link rel="stylesheet" href="stylesheets/main.css">
     <link rel="stylesheet" href="stylesheets/main_panel.css">
     <link rel="stylesheet" href="stylesheets/queue_panel.css">
@@ -20,13 +17,13 @@
         <div class="main-header-date-time-container">
           <table class="main-header-date-time">
             <tr>
-              <td>Tuesday</td>
+              <td id="main-header-date-time-day"></td>
             </tr>
             <tr>
-              <td>December 25, 2018</td>
+              <td id="main-header-date-time-date"></td>
             </tr>
             <tr>
-              <td>12:13 PM</td>
+              <td id="main-header-date-time-time"></td>
             </tr>
           </table>
         </div>
@@ -41,11 +38,11 @@
           </tr>
         </table>
       </div>
-      <div class="main-panel-scrolling-headline main-panel-right news-ticker">
-        <ul id="news-ticker">
-          <li><span>THE INVENTION STUDIO IS A STUDENT-RUN MAKERSPACE OPEN TO ALL GEORGIA TECH</span></li>
-          <li><span>IT IS STAFFED BY PROTOTYPING INSTRUCTORS, STUDENT VOLUNTEERS WHO ARE ON HAND TO TRAIN YOU AND HELP YOU WITH YOUR PROJECTS</span></li>
-          <li><span>USE OF THE STUDIO IS FREE FOR ALL STUDENTS, FACULTY, AND STAFF OF GEORGIA TECH, REGARDLESS OF YEAR, MAJOR, OR PRIOR EXPERIENCE</span></li>
+      <div class="main-panel-scrolling-headline main-panel-right news-ticker" id="news-ticker">
+        <ul>
+          <li>THE INVENTION STUDIO IS A STUDENT-RUN MAKERSPACE OPEN TO ALL GEORGIA TECH</li>
+          <li>IT IS STAFFED BY PROTOTYPING INSTRUCTORS, STUDENT VOLUNTEERS WHO ARE ON HAND TO TRAIN YOU AND HELP YOU WITH YOUR PROJECTS</li>
+          <li>USE OF THE STUDIO IS FREE FOR ALL STUDENTS, FACULTY, AND STAFF OF GEORGIA TECH, REGARDLESS OF YEAR, MAJOR, OR PRIOR EXPERIENCE</li>
         </ul>
       </div>
       <div class="queue-header">
@@ -62,21 +59,27 @@
         <table class="queue-info-table">
           <tr>
             <td><span style="float: left;">QUEUE</span></td>
+            <!-- For now, the "Average Wait Time" field is hidden since the data sorce has not been implemented -->
             <td><span style="display: none; float: right;">Avg Wait: 0 min</span></td>
           </tr>
         </table>
       </div>
       <div class="queue-panel">
+        <template id="template-queue-entry">
+          <div class="queue-entry">
+            <table class="queue-entry-title-container">
+              <tr>
+                <td class="queue-entry-title"><span class="queue-entry-title-content"></span></td>
+              </tr>
+            </table>
+          </div>
+        </template>
       </div>
     </div>
-    <template>
-      <div class="queue-entry">
-        <table class="queue-entry-title-container">
-          <tr>
-            <td class="queue-entry-title"><span class="queue-entry-title-content"></span></td>
-          </tr>
-        </table>
-      </div>
-    </template>
+
+    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="scripts/clock.js"></script>
+    <script type="text/javascript" src="scripts/news_ticker.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
