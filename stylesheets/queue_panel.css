@@ -1,3 +1,10 @@
+.queue-header {
+  grid-area: queue-headline;
+  background-color: #283941;
+  transition: background-color 1s cubic-bezier(1, 1, 1, 1);
+	transition-delay: 0s;
+}
+
 .queue-header-table {
   height: 100%;
   width: 100%;
@@ -15,6 +22,12 @@
   font-size: 24px;
 }
 
+.queue-info {
+  grid-area: queue-info;
+  padding: 0px 15px;
+  background-color: #33393F;
+}
+
 .queue-info-table {
   height: 100%;
   width: 100%;
@@ -27,8 +40,10 @@
 .queue-panel {
   grid-area: queue-panel;
   padding: 0 20px;
-  background-color: #ffdbdb;
+  background-color: #eff3f5;
   overflow: scroll;
+  transition: background-color 1s cubic-bezier(1, 1, 1, 1);
+	transition-delay: 0s;
 }
 
 .queue-entry {
@@ -38,8 +53,8 @@
   margin: 10px 0;
   color: #07090A;
   font-size: 20px;
-  background-color: #ffa3a3;
-  border: 2px solid #b60000;
+  background-color: #dfe8ec;
+  border: 2px solid #283941;
   border-radius: 8px;
 }
 
