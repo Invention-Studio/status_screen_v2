@@ -9,7 +9,9 @@
 
   function NewsTicker(tickerSelector) {
     //Ensure a proper selector for the ticker element is provided
-    if (tickerSelector.charAt(0) != '#') {
+    if (!tickerSelector) {
+        throw new Error('No selector provided');
+    } else if (tickerSelector.charAt(0) != '#') {
       throw new Error("Selector must be element id. Use # selector.");
     }
 
