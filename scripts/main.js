@@ -21,12 +21,14 @@
 
   var App = window.App;
   var Clock = App.Clock;
+  var HumanityApi = App.HumanityApi;
   var InventionStudioApi = App.InventionStudioApi;
   var Queue = App.Queue;
   var NewsTicker = App.NewsTicker;
 
   var mainClock = new Clock(SELECTOR_CLOCK_WEEKDAY, SELECTOR_CLOCK_DATE, SELECTOR_CLOCK_TIME);
   var mainNewsTicker = new NewsTicker(SELECTOR_NEWS_TICKER);
+  var humanityApi = new HumanityApi();
   var inventionStudioApi = new InventionStudioApi();
   var mainQueue = new Queue(SELECTOR_QUEUE_HEADER, SELECTOR_QUEUE_TITLE, SELECTOR_QUEUE_STATUS, SELECTOR_QUEUE_PANEL, SELECTOR_TEMPLATE_QUEUE_ENTRY);
 
@@ -58,7 +60,7 @@
         var queueEntries = [];
 
         entryArray.forEach(function (entry) {
-          if (entry.queueName == currentQueue) {
+          if (entry.queueName == currentQueue.title) {
             queueEntries.push(entry);
           }
         });
