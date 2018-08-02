@@ -1,23 +1,33 @@
 (function (window) {
   'use strict';
 
-  var App = window.App || {};
-  var $ = window.jQuery;
+  let App = window.App || {};
+  let $ = window.jQuery;
 
-  var URL = 'https://is-apps.me.gatech.edu/api/v1-0/';
-  var QUEUE_REQUEST_ENDPOINT = 'server/queues';
+  let BASE_URL = 'https://is-apps.me.gatech.edu/api/v1-0/';
+  let QUEUE_REQUEST_ENDPOINT = 'status/queues';
+  let ON_DUTY_REQUEST_ENDPOINT = 'status/on_duty';
 
   function InventionStudioApi() {
   }
 
   InventionStudioApi.prototype.getQueue = function(onComplete) {
-    var requestUrl = URL + QUEUE_REQUEST_ENDPOINT;
+    let requestUrl = BASE_URL + QUEUE_REQUEST_ENDPOINT;
     return $.get(requestUrl, function (serverResponse) {
       if (onComplete) {
         onComplete(serverResponse);
       }
     });
-  }
+  };
+
+  InventionStudioApi.prototype.getOnDuty = function(onComplete) {
+    let requestUrl = BASE_URL + ON_DUTY_REQUEST_ENDPOINT;
+    return $.get(requestUrl, function (serverResponse) {
+      if (onComplete) {
+        onComplete(serverResponse);
+      }
+    });
+  };
 
   App.InventionStudioApi = InventionStudioApi;
   window.App = App;

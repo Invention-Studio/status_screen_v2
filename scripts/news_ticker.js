@@ -1,11 +1,11 @@
 (function (window) {
   'use strict';
 
-  var App = window.App || {};
-  var $ = window.jQuery;
+  let App = window.App || {};
+  let $ = window.jQuery;
 
   //Sets the scroll speed of the ticker
-  var TICKER_SPEED = 125; //px per second
+  let TICKER_SPEED = 125; //px per second
 
   function NewsTicker(tickerSelector) {
     //Ensure a proper selector for the ticker element is provided
@@ -16,7 +16,7 @@
     }
 
     //Get the ticker element
-    var news_ticker = $(tickerSelector)[0];
+    let news_ticker = $(tickerSelector)[0];
 
     //Build the ticker message
     var message = "";
@@ -28,18 +28,18 @@
     });
 
     //Create a table - a table is used to center the message text vertically
-    var table = document.createElement("table");
+    let table = document.createElement("table");
     $(table).css({ 'width': '100%', 'height': '100%' });
     news_ticker.appendChild(table);
 
     //Create a single row/column cell entry
-    var tr = document.createElement("tr");
+    let tr = document.createElement("tr");
     table.appendChild(tr);
-    var td = document.createElement("td");
+    let td = document.createElement("td");
     table.appendChild(td);
 
     //Fill the table cell with the constructed message
-    var span = document.createElement("span");
+    let span = document.createElement("span");
     span.className = "ticker-span"; //This class is used in news_ticker.css for styling
     span.innerText = message + message; //Double the message up to allow for
                                         //continuous scrolling without gaps
@@ -52,10 +52,10 @@
 
     //Calculate the width of the message
     //Divide by two to get the width of one copy of the message, since it is doubled up
-    var textWidth = span.clientWidth / 2;
+    let textWidth = span.clientWidth / 2;
 
     //Calculate the scroll time for one copy of the message
-    var time = (textWidth / TICKER_SPEED) * 1000;
+    let time = (textWidth / TICKER_SPEED) * 1000;
 
     //Start the animation
     animate.call(this, span, textWidth, time);

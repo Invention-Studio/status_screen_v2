@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="main-header main-panel-right">
+      <div class="main-header main-panel-left">
         <img class="main-header-logo" src="img/header_logo.svg" alt="Invention Studio">
         <img class="main-header-title" src="img/header_title.svg" alt="Invention Studio">
         <div class="main-header-date-time-container">
@@ -28,17 +28,27 @@
           </table>
         </div>
       </div>
-      <div class="main-panel main-panel-right">
-
+      <div class="main-panel main-panel-left" id="main-on-duty">
+        <template id="template-pi-card">
+          <div class="pi-card">
+            <div class="pi-card-image-container">
+              <img class="pi-card-image"/>
+            </div>
+            <table class="pi-card-info">
+              <tr><td><span class="pi-card-name-content"></span></td></tr>
+              <tr><td><span class="pi-card-status-content"></span></td></tr>
+            </table>
+          </div>
+        </template>
       </div>
-      <div class="main-panel-headline main-panel-right">
+      <div class="main-panel-headline main-panel-left">
         <table class="main-panel-headline-table">
           <tr>
             <td id="headline"><span>Who's on duty?</span></td>
           </tr>
         </table>
       </div>
-      <div class="main-panel-scrolling-headline main-panel-right news-ticker" id="news-ticker">
+      <div class="main-panel-scrolling-headline main-panel-left news-ticker" id="news-ticker">
         <ul>
           <li>THE INVENTION STUDIO IS A STUDENT-RUN MAKERSPACE OPEN TO ALL GEORGIA TECH</li>
           <li>IT IS STAFFED BY PROTOTYPING INSTRUCTORS, STUDENT VOLUNTEERS WHO ARE ON HAND TO TRAIN YOU AND HELP YOU WITH YOUR PROJECTS</li>
@@ -78,10 +88,11 @@
     </div>
 
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="scripts/functions.js"></script>
     <script type="text/javascript" src="scripts/clock.js"></script>
+    <script type="text/javascript" src="scripts/on_duty.js"></script>
     <script type="text/javascript" src="scripts/queue.js"></script>
     <script type="text/javascript" src="scripts/news_ticker.js"></script>
-    <script type="text/javascript" src="scripts/humanity_api.js"></script>
     <script type="text/javascript" src="scripts/invention_studio_api.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
 
