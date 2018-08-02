@@ -4,7 +4,7 @@
   let App = window.App || {};
   let $ = window.jQuery;
 
-  let DEFAULT_IMAGE_URL = "/img/empty_avatar.png";
+  let DEFAULT_IMAGE_URL = "img/empty_avatar.png";
   let EMPTY_ENTRY = {name: "Nobody On Duty", photoUrl: DEFAULT_IMAGE_URL, late: false};
 
   function OnDuty(onDutyPanelSelector, elementTemplateSelector) {
