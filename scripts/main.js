@@ -36,6 +36,16 @@
   let mainOnDuty = new OnDuty(SELECTOR_ON_DUTY_PANEL, SELECTOR_TEMPLATE_PI_CARD);
   let mainQueue = new Queue(SELECTOR_QUEUE_HEADER, SELECTOR_QUEUE_TITLE, SELECTOR_QUEUE_STATUS, SELECTOR_QUEUE_PANEL, SELECTOR_TEMPLATE_QUEUE_ENTRY);
 
+  var window_focus = true;
+
+  $(window).focus(function() {
+    window_focus = true;
+  });
+
+  $(window).focusout(function() {
+    window_focus = false;
+  })
+
   var currentQueue = QUEUE_INFO_DEFAULT;
   updateQueues();
 
@@ -43,8 +53,10 @@
   updateOnDuty();
 
   window.setInterval(function() {
-    updateQueues();
-    updateOnDuty();
+    if (window_focus) {
+      updateQueues();
+      updateOnDuty();
+    }
   }, 15000);
 
   function updateQueues() {
