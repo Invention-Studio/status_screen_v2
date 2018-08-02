@@ -9,7 +9,7 @@ function onDutyArraysMatch(a, b) {
     return false;
   }
 
-  return (JSON.stringify(a) !== JSON.stringify(b));
+  return (JSON.stringify(a) === JSON.stringify(b));
 };
 
 //Much of the logic in this function is copied from https://gist.github.com/mjackson/5311256
