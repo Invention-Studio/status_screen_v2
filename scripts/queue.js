@@ -117,7 +117,7 @@
     //Find, fade out, and remove all of the existing queue entry elements
     this.$queuePanel.find('.queue-entry').fadeOut().promise().done(function() {
       //Remove the existing queue entry elements
-      this.unmount();
+      this.remove();
 
       //Then add the new elements
       if (queueEntries.length > 0) { //If there are entries, create and display an element for each
