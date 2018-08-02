@@ -9,11 +9,8 @@ function onDutyArraysMatch(a, b) {
     return false;
   }
 
-  console.log(JSON.stringify(a));
-  console.log(JSON.stringify(b));
-  console.log(JSON.stringify(a) == JSON.stringify(b));
   //Arrays cannot be compared directly with === so stringify them
-  return (JSON.stringify(a) == JSON.stringify(b));
+  return (JSON.stringify(a) === JSON.stringify(b));
 };
 
 //Much of the logic in this function is copied from https://gist.github.com/mjackson/5311256

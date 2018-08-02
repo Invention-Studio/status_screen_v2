@@ -39,7 +39,7 @@
   var currentQueue = QUEUE_INFO_DEFAULT;
   updateQueues();
 
-  var onDutyEntries = [];
+  var onDutyEntries = null;
   updateOnDuty();
 
   window.setInterval(function() {
