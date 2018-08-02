@@ -4,6 +4,11 @@ function onDutyArraysMatch(a, b) {
     return true;
   }
 
+  //Check for null values
+  if (a === null || b === null) {
+    return false;
+  }
+
   //Check the lengths
   if (a.length !== b.length) {
     return false;
