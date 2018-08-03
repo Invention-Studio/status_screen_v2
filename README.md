@@ -1,6 +1,8 @@
 # Invention Studio Status Screen (v2)
 The Invention Studio Status Screen is a single-page web application for displaying information in the Invention Studio.
 
+Access the current implementation of this project at https://is-apps.me.gatech.edu/status_screen_v2.
+
 ## Design
 This project is developed using responsive web design, meaning that it may be displayed on any platform - primarily desktop, tablet, and mobile. However, it is primarily intended for large-format displays (i.e. desktop) as an ambient display with no user interaction.
 
